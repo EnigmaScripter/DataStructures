@@ -33,6 +33,8 @@ stack= [] # creating the stack
 def stack_Push(element): #push
     stack.append(element)
     print(sorted(stack))
+    print(type(stack))
+    print(type(stack[0]))
  
 def stack_pop(): # pop
     if not stack:
@@ -52,9 +54,9 @@ def stack_Ontop_Element(): #got the ontop element
         print(f"the top element is {stack[-1]}")
 
 while True:
-    userSelection = int(input("Please select the operation you want(1 => push, 2 => pop, 3 => check empty 4 => find the last element) "))
+     userSelection = int(input("Please select the operation you want(1 => push, 2 => pop, 3 => check empty 4 => find the last element) "))
     if userSelection == 1:
-        element= input("please enter the element: ")
+        element= int(input("please enter the element: "))
         stack_Push(element)
     elif userSelection == 2:
         stack_pop()
